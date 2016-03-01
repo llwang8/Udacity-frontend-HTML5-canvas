@@ -2,11 +2,27 @@
 
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>HTML5-canvas</title>
+    <style>
+        body {
+           background-color: tan;
+        }
+        .centered {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
-    <canvas id="c" width="600" height="852"></canvas>
-
+    <div class="centered">
+        <canvas id="c" width="512" height="512"></canvas>
+    </div>
     <script>
     window.onload = function(){
         var c = document.querySelector("#c");
@@ -18,7 +34,7 @@
             console.log("loaded image");
             ctx.drawImage(image, 0, 0, c.width, c.height); []
 
-             ctx.font = "bold 38px Palatino Linotype"
+            ctx.font = "bold 32px Palatino Linotype"
             ctx.textAlign ="center";
             ctx.fillStyle = "white";
             ctx.fillText("ADA LOVELACE (1815 - 1852)", c.width/2, c.height*0.05);
@@ -32,7 +48,8 @@
             var savedImage = c.toDataURL();
             window.open(savedImage);
         }
-        image.src = "ada_lovelace.jpg";
+        //image.src = "ada_lovelace.jpg";
+        image.src = "http://makezine.com/wp-content/uploads/2012/10/ladyada1.jpg";
     };
         //ctx.fillRect(100, 100, 100, 100);
         /*

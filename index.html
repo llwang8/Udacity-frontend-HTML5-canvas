@@ -48,17 +48,27 @@
       var canvas = document.querySelector('canvas');
       var ctx = canvas.getContext("2d");
       // Your code here
-      ctx.font = "28px lato";
-      ctx.strokeStyle = "black";
-      ctx.strokeText = (topLine, 0,5, 5);
-      ctr.font = "18px lato";
-      ctx.strokeText = (bottomLine, 5, 280);
+      if (image != null) {
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+      }
 
+      //Text attributes
 
+      ctx.font = "bold 32px Palatino Linotype"
+      ctx.textAlign ="center";
+      ctx.fillStyle = "white";
+      ctx.strokeStyle = "#13142d";
+      ctx.lineWidth = 2;
 
+      if (topLine != null) {
+        ctx.fillText(topLine, canvas.width/2, 28);
+        ctx.strokeText(topLine, canvas.width/2, 28);
+      }
 
-
-
+      if (bottomLine != null) {
+        ctx.fillText(bottomLine, canvas.width/2, canvas.height-10);
+        ctx.strokeText(bottomLine, canvas.width/2, canvas.height-10);
+      }
     }
 
     function saveFile() {
@@ -66,11 +76,9 @@
     }
 
     function handleFileSelect(evt) {
-      var canvasWidth = 500;
-      var canvasHeight = 500;
+      var canvasWidth = 512;
+      var canvasHeight = 512;
       var file = evt.target.files[0];
-
-
 
       var reader = new FileReader();
       reader.onload = function(fileObject) {
