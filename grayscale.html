@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Canvas Grayscale</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>
+    #image-container {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+    <div>
+        <canvas width="500" height="500"></canvas>
+    </div>
+
+    <script type="text/javascript">
+    //change image to grayscale -- Udacity
+    //http://media1.santabanta.com/full1/Outdoors/Landscapes/landscapes-247a.jpg
+    //http://images.fineartamerica.com/images-medium-large/1-organ-pipe-johnathan-harris.jpg
+    var canvas = document.querySelector("canvas");
+    var cty = canvas.getContect("2d");
+
+    var image = new Image();
+    image.onload = function() {
+        ctx.drawImage(image, 0, 0);
+
+    }
+    image.src = "";
+
+    var makePixelGrayScale = function(r, g, b, a) {
+        var y = (0.3 * r) + (0.59 * 9) + (0.11 * b);
+        return {r:y, g:y, b:y, a:y};
+    }
+
+    function makeGrayScale(){
+        var r, g, b, a;
+        var imageData = ctx.getImageData(0, 0, 500, 500);
+        var numPixels = imageData.data.length /4;
+        for (var i = 0; i < numPixels; i++) {
+            r = imageData.data[i*4+0];
+            g = imageData.data[i*4+1];
+            b = imageData.data[i*4+2];
+            a = imageData.data[i*4+3];
+            pixel = makePixelGrayScale(r, g, b, a);
+            imageData.data[i*4+0] = pixel.r;
+            imageData.data[i*4+1] = pixel.g;
+            imageData.data[i*4+2] = pixel.b;
+            imageData.data[i*4+3] = pixel.a;
+        }
+        ctx.putImageData(imageData, 0, 0);
+    }
+
+
+
+    </script>
+<script>
+    //change image to grayscale
+
+    var imgObj = document.getElementById('js-image');
+function gray(imgObj) {
+    var canvas = document.createElement('canvas');
+    var canvasContext = canvas.getContext('2d');
+
+    var imgW = imgObj.width;
+    var imgH = imgObj.height;
+    canvas.width = imgW;
+    canvas.height = imgH;
+
+    canvasContext.drawImage(imgObj, 0, 0);
+    var imgPixels = canvasContext.getImageData(0, 0, imgW, imgH);
+
+    for(var y = 0; y < imgPixels.height; y++){
+        for(var x = 0; x < imgPixels.width; x++){
+            var i = (y * 4) * imgPixels.width + x * 4;
+            var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
+            imgPixels.data[i] = avg;
+            imgPixels.data[i + 1] = avg;
+            imgPixels.data[i + 2] = avg;
+        }
+    }
+    canvasContext.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+    return canvas.toDataURL();
+}
+    imgObj.src = gray(imgObj);
+    </script>
+
+
+</body>
+</html>

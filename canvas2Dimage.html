@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>MemeMaker-Simple</title>
+  <title>Canvas 2D image</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="mobile-web-app-capable" content="yes">
@@ -19,16 +19,24 @@
         <canvas width="500" height="500"></canvas>
     </div>
     <script type="text/javascript">
-
         var canvas = document.querySelector('canvas');
         var ctx = canvas.getContext("2d");
         var data = ctx.getImageData(0, 0, 500, 500);
-        for (var i=0; i<imgData.data.length; i+=10) {
-            imgData.data[i] = rgb(0, 255, 0);
+
+        //change the 10th pix to green
+        function toGreen(imgData) {
+            for (var i=0; i<imgData.data.length; i++) {
+                if (i % 10 == 0) {
+                    imgData.data[i * 4 + 1] = 255;//r, g, b, a for opacity
+                    imgData.data[i * 4 + 3] = 255;
+                }
+            }
+            ctx.putImageData(imgData, 0, 0);
         }
-        ctx.putImageData(imgData, 10, 10);
+        toGreen(data);
 
     </script>
+
 
 </body>
 </html>
