@@ -1,0 +1,17 @@
+0:00:00.550,0:00:04.380
+In this lesson, we explored the basics of Canvas 2D while creating memes and
+
+0:00:04.380,0:00:05.630
+drawing pictures.
+
+0:00:05.630,0:00:07.850
+And we hope you had some fun creating some memes of your own.
+
+0:00:07.850,0:00:11.020
+>> We'll see you in the next lesson where we'll be creating image filters by
+
+0:00:11.020,0:00:12.730
+manipulating pixels.
+
+0:00:12.730,0:00:13.230
+>> See you then.

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>HTML5-canvas</title>
+</head>
+<body>
+    <canvas id="c" width="600" height="852"></canvas>
+
+    <script>
+    window.onload = function(){
+        var c = document.querySelector("#c");
+        var ctx = c.getContext("2d");
+
+        var image = new Image();
+
+        image.onload = function() {
+            console.log("loaded image");
+            ctx.drawImage(image, 0, 0, c.width, c.height); []
+
+             ctx.font = "bold 38px Palatino Linotype"
+            ctx.textAlign ="center";
+            ctx.fillStyle = "white";
+            ctx.fillText("ADA LOVELACE (1815 - 1852)", c.width/2, c.height*0.05);
+            ctx.fillText("The First Female Programmer!", c.width/2, c.height*0.98);
+
+            ctx.strokeStyle = "#13142d";
+            ctx.lineWidth = 2;
+            ctx.strokeText("ADA LOVELACE (1815 - 1852)", c.width/2, c.height*0.05);
+            ctx.strokeText("The First Female Programmer!", c.width/2, c.height*0.98);
+
+            var savedImage = c.toDataURL();
+            window.open(savedImage);
+        }
+        image.src = "ada_lovelace.jpg";
+    };
+        //ctx.fillRect(100, 100, 100, 100);
+        /*
+        ctx.strokeRect(50, 50, 50, 50);
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, 50, 50);
+        ctx.fillStyle = "yellow";
+        //ctx.clearRect(0, 0, 25, 25);
+        ctx.fillRect(0,0, 25, 25);
+
+
+        ctx.beginPath();
+        ctx.moveTo(10, 10);
+        ctx.lineTo(50, 50);
+        ctx.lineTo(50, 10);
+        ctx.lineTo(10, 10);
+        ctx.lineTo(10, 50);
+        ctx.lineTo(50, 50);
+        //ctx.fill();
+        ctx.stroke();
+        */
+ /*
+        ctx.strokeStyle = "#33cc33";
+        ctx.strokeRect(50,50, 100, 100);
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(50,50, 100, 100);
+        ctx.beginPath();
+        ctx.moveTo(75, 75);
+        ctx.lineTo(125, 75);
+        ctx.lineTo(125, 125);
+        ctx.lineTo(75, 75);
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(75, 75);
+        ctx.lineTo(75, 125);
+        ctx.lineTo(125, 125);
+        ctx.lineTo(75, 75);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        //ctx.scale(30,50);
+        //ctx.translate(200, 300);
+        //ctx.rotate(angleRadians);
+
+        ctx.strokeStyle = "black"
+        ctx.fillText("Hello Udacity!", 50,10);
+*/
+
+
+
+
+
+     </script>
+
+</body>
+</html>

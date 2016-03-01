@@ -1,0 +1,56 @@
+0:00:00.990,0:00:02.680
+So this is what I came up with.
+
+0:00:02.680,0:00:04.380
+Remember, this is the shape that we're going for.
+
+0:00:05.420,0:00:08.970
+I started off by drawing the outer rectangle by using strokeRect.
+
+0:00:08.970,0:00:14.120
+We wanted it to start at 50, 50 and then it needs to be 100 by 100 pixels wide.
+
+0:00:14.120,0:00:15.450
+Then we began the path.
+
+0:00:15.450,0:00:16.350
+The path starts at 75, 75.
+
+0:00:16.350,0:00:20.290
+So that just takes the pen and moves it here.
+
+0:00:20.290,0:00:24.910
+Then we move it to 125, 125, but we create a line there.
+
+0:00:24.910,0:00:28.020
+So the pen goes down and moves over.
+
+0:00:28.020,0:00:30.020
+Then we create a line up to 125,
+
+0:00:30.020,0:00:34.710
+75 which takes the pen back up, and then actually we can stop there.
+
+0:00:34.710,0:00:38.130
+With that shape, with that drawing, we can actually start to fill in.
+
+0:00:38.130,0:00:40.710
+So, then we call fill and we'll get this.
+
+0:00:40.710,0:00:42.840
+Let's go ahead and see if this code works.
+
+0:00:42.840,0:00:47.050
+Okay. I've saved the file let's come over here and hit refresh, and low and
+
+0:00:47.050,0:00:49.380
+behold we see the shape that we were going for.
+
+0:00:49.380,0:00:51.990
+At this point you got the basics down for drawing.
+
+0:00:51.990,0:00:54.070
+I recommend having some fun with it.
+
+0:00:54.070,0:00:57.480
+See what kind of cool, crazy drawings you can make and post them in the forums.

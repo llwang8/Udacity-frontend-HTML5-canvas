@@ -1,0 +1,44 @@
+0:00:00.180,0:00:01.170
+Let's start with A.
+
+0:00:01.170,0:00:04.300
+Going up we can see that we're at 2 on the x axis.
+
+0:00:04.300,0:00:06.850
+And we're at the same level as this point over here.
+
+0:00:06.850,0:00:08.940
+So we're at 1 on the y axis.
+
+0:00:08.940,0:00:11.480
+So we've got 2, 1.
+
+0:00:11.480,0:00:13.010
+Next up looking at B.
+
+0:00:13.010,0:00:15.110
+We are one line over.
+
+0:00:15.110,0:00:17.570
+So we know that the x has to be 3.
+
+0:00:17.570,0:00:21.420
+And we've gone down one, so our y is 2.
+
+0:00:21.420,0:00:22.530
+Last but not least with C,
+
+0:00:22.530,0:00:28.320
+we're at 1 on the x axis and we're at now 3 on the y axis.
+
+0:00:28.320,0:00:29.730
+So we've got 1, 3.
+
+0:00:29.730,0:00:30.590
+Important to note,
+
+0:00:30.590,0:00:35.310
+these are not negative numbers, these are positive numbers on the y axis.
+
+0:00:35.310,0:00:37.700
+The y axis gets more positive the farther down you go.

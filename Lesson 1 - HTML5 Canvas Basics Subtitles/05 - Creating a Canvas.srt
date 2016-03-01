@@ -1,0 +1,65 @@
+0:00:00.250,0:00:04.760
+Enough talk about canvases and memes, let's go ahead and start making one.
+
+0:00:04.760,0:00:09.660
+Right here I've got an HTML document which we'll be using to create the canvas.
+
+0:00:09.660,0:00:13.910
+In order to have a canvas, we need to use the canvas tag, which looks like so.
+
+0:00:13.910,0:00:16.309
+The canvas tag takes optional width and
+
+0:00:16.309,0:00:20.740
+height parameters to allocate some space on the web page for the canvas.
+
+0:00:20.740,0:00:24.180
+Like you had canvas in the real world, this canvas tag alone is
+
+0:00:24.180,0:00:27.230
+only going to give us the physical space on the website to work with.
+
+0:00:27.230,0:00:30.090
+We actually need to take a few more steps to get an object that we
+
+0:00:30.090,0:00:31.270
+can use for drawing.
+
+0:00:31.270,0:00:34.570
+To use a canvas, we need to access it from our JavaScript code
+
+0:00:34.570,0:00:38.540
+which I've included between these two script tags after the canvas.
+
+0:00:38.540,0:00:41.500
+We'll start by grabbing the canvas using this selector to
+
+0:00:41.500,0:00:44.910
+get the canvas with the idea of C from the body.
+
+0:00:44.910,0:00:47.590
+And then from the canvas, we need to grab its context.
+
+0:00:47.590,0:00:50.970
+So to do that we'll simply call the method; get context,
+
+0:00:50.970,0:00:55.180
+on the canvas that we've created, and we have to pass in this perimeter for 2D.
+
+0:00:55.180,0:00:57.750
+You might wonder here if we can grab the 2D canvas,
+
+0:00:57.750,0:01:00.600
+could we also grab a 3D canvas?
+
+0:01:00.600,0:01:03.770
+In fact we can, but that's not what this course is about.
+
+0:01:03.770,0:01:06.210
+So we're going to focus on 2D canvases.
+
+0:01:06.210,0:01:10.370
+From here, we can actually start calling methods on this context to start
+
+0:01:10.370,0:01:11.380
+drawing on our canvas

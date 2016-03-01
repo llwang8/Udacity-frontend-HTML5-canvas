@@ -1,0 +1,50 @@
+0:00:00.100,0:00:01.630
+So this is what I've come up with.
+
+0:00:01.630,0:00:06.520
+I've used the font method on the context and set it to 36 point impact and
+
+0:00:06.520,0:00:09.380
+I've set the textAlign property on the context to center.
+
+0:00:09.380,0:00:12.960
+You didn't have to do this, but you'll see why this is cool in a second.
+
+0:00:12.960,0:00:16.239
+For the internal fillText, I set it to white.
+
+0:00:16.239,0:00:19.040
+Then I set the fillText to CANVAS MEMES!,
+
+0:00:19.040,0:00:22.350
+with an x position starting at half the width of the canvas and
+
+0:00:22.350,0:00:23.828
+a y position of 40.
+
+0:00:23.828,0:00:26.590
+This x position plus this text alignment of
+
+0:00:26.590,0:00:29.620
+center makes sure that our text is centered on the page.
+
+0:00:29.620,0:00:32.800
+Then for the strokes, I set the style to black,
+
+0:00:32.800,0:00:37.020
+I set the line width to 3, then I finish up with the strokeText method,
+
+0:00:37.020,0:00:40.760
+which takes in the same parameters as the fillText method from before.
+
+0:00:40.760,0:00:43.420
+Let's go ahead and save this and see how it looks.
+
+0:00:43.420,0:00:46.160
+Coming over to the browser, we see our Canvas Memes!,
+
+0:00:46.160,0:00:48.690
+with white text and a black outline.
+
+0:00:48.690,0:00:50.590
+Looks like we're ready to start making some memes.

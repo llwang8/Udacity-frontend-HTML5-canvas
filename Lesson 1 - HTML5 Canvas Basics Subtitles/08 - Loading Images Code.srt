@@ -1,0 +1,101 @@
+0:00:00.240,0:00:04.710
+if there's one thing that any good meme needs, it is an awesome picture.
+
+0:00:04.710,0:00:07.970
+If we were doing this in HTML, we could make an image appear on the screen by
+
+0:00:07.970,0:00:12.840
+using the img tag and setting a source to something this fake image.
+
+0:00:12.840,0:00:15.790
+But we're doing this with canvas, so let's get rid of this line.
+
+0:00:15.790,0:00:19.170
+So, we'll start by creating a new image, which we'll call image.
+
+0:00:19.170,0:00:20.270
+because why not?
+
+0:00:20.270,0:00:22.910
+And we'll set it equal to a new Image object.
+
+0:00:22.910,0:00:27.830
+Down here, we'll set this source property of the image object to this file,
+
+0:00:27.830,0:00:30.130
+which I've got saved to my local machine.
+
+0:00:30.130,0:00:33.330
+This is part of the power of using the canvas to draw on the screen.
+
+0:00:33.330,0:00:37.010
+We can use a local file as well as any file on the Internet, so
+
+0:00:37.010,0:00:41.150
+if you've found a cool image online, you could put that URL right here or
+
+0:00:41.150,0:00:44.180
+just use a link to the file on your local machine.
+
+0:00:44.180,0:00:46.930
+Images in JavaScript get loaded asynchronously,
+
+0:00:46.930,0:00:49.610
+which means that we need to do work after it's loaded,
+
+0:00:49.610,0:00:54.460
+so we'll set the onload function on the image object to what we've got here.
+
+0:00:54.460,0:00:58.900
+In this case we'll console.log Loaded image, and then we'll doSomethingElse.
+
+0:00:58.900,0:01:00.460
+Let's be a little bit more specific about what we
+
+0:01:00.460,0:01:02.270
+want to happen after the image is loaded.
+
+0:01:02.270,0:01:06.555
+We'll go ahead and grab the ctx again that we created up here and
+
+0:01:06.555,0:01:09.770
+call the drawImage method on the ctx of the canvas.
+
+0:01:09.770,0:01:13.640
+Into the drawImage method, we'll pass the image itself along with its
+
+0:01:13.640,0:01:18.480
+starting coordinates, x and y, and its width and height, which in this case
+
+0:01:18.480,0:01:22.730
+we're setting to the same width and height as the canvas itself inside the DOM.
+
+0:01:22.730,0:01:24.670
+Let's go ahead and see if this works.
+
+0:01:24.670,0:01:26.190
+So we've got the file saved over here.
+
+0:01:26.190,0:01:29.930
+And inside my browser, I'll go ahead and open up this HTML file.
+
+0:01:29.930,0:01:33.650
+And we can see it's saved right here on my local machine in the same directory
+
+0:01:33.650,0:01:38.210
+as that fry_fixed image that we set the source of the image to right here.
+
+0:01:38.210,0:01:39.730
+So let's go ahead and open it up.
+
+0:01:39.730,0:01:40.450
+And voilà!
+
+0:01:40.450,0:01:41.820
+We see the image appear.
+
+0:01:41.820,0:01:44.590
+To learn more about other ways of calling this drawImage method,
+
+0:01:44.590,0:01:45.980
+check the link in the instructor notes.
